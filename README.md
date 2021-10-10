@@ -1,5 +1,6 @@
 # waybar-ethereum-gastracker
-Displays Ethereum Gas prices in your Waybar
+Script for the Waybar Custom Module https://github.com/Alexays/Waybar
+Displays Ethereum Gas Price
 
 Data is fetched from https://etherscan.io/gastracker
 
