@@ -10,29 +10,6 @@ Data is fetched from https://etherscan.io/gastracker
 }
 ```
 
-You can define custom low/medium ranges for css classes:
-
-```
-"custom/gas": {
-        "exec": "gastracker.py <low> <average>",
-        "return-type": "json"
-}
-```
->average_price < `<low>` = low
-
->average_price < `<average>` = average
-
->average_price > `<average>` = high
-
-for Example:
-```
-"custom/gas": {
-        "exec": "gastracker.py 70 80",
-        "return-type": "json"
-}
-```
->will set the `low` class if the average gas price is below 70, the `average` class if below 80 and the `high` class if above 80
-
 ## Styling
 ```
 #custom-gas.low {
@@ -47,3 +24,6 @@ for Example:
     background-color: red;
 }
 ```
+>`high`is set when the average price is 10% higher the average price from the start time of the script
+>`low` is set when the average price is 10% lower the average price from the start time of the script
+>`average` everything between
