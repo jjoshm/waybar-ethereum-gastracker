@@ -18,10 +18,10 @@ class Tracker:
     def parseArgs(self):
         if len(sys.argv) < 3:
             self.low = 50
-            self.medium = 100
+            self.average = 100
         else:
             self.low = int(sys.argv[1])
-            self.medium = int(sys.argv[2])
+            self.average = int(sys.argv[2])
 
     def getSid(self):
         req = self.session.get('https://etherscan.io/gastracker', headers=self.headers)
@@ -44,10 +44,10 @@ class Tracker:
     def output(self):
         text = "low: " + self.data['lowPrice'] + ' avg: ' + self.data['avgPrice'] + ' high: ' + self.data['highPrice']
         css_class = "low"
-        if int(self.data['avgPrice']) > self.medium:
+        if int(self.data['avgPrice']) > self.average:
             css_class = "high"
         elif int(self.data['avgPrice']) > self.low:
-            css_class = "medium"
+            css_class = "average"
         out = {'text': text, 'class': css_class}
         print(json.dumps(out), flush=True)
 
