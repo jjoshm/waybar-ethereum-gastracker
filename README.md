@@ -1,5 +1,6 @@
 # waybar-ethereum-gastracker
 Displays Ethereum Gas prices in your Waybar
+
 Data is fetched from https://etherscan.io/gastracker
 
 ## Config
@@ -24,6 +25,6 @@ Data is fetched from https://etherscan.io/gastracker
     background-color: red;
 }
 ```
->`high`is set when the average price is 10% higher the average price from the start time of the script
+>`high`is set when the average price is 10% higher the average price from the start time of the script.
 >`low` is set when the average price is 10% lower the average price from the start time of the script
->`average` everything between
+>.`average` everything between
